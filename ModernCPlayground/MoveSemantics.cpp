@@ -52,6 +52,7 @@ void Swap(T& a, T& b)
     b = std::move(tmp);
 }
 
+// This shows that returning a container does not perform a copy to the address of the return value. The compiler will optimize this copy out.
 Container ReturnAContainer()
 {
     Container container;
